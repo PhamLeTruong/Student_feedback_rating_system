@@ -47,9 +47,9 @@ def Preprocessing(feedback):
 
     return feedback
 
-model, cv = joblib.load('model.h5')
 st.header('Mời Sinh Viên Nhập Phản Hồi Đánh Giá')
 feedback = st.text_input('', '', max_chars=250, help='Vui lòng đánh giá bằng tiếng việt và đúng chính tả')
+model, cv = joblib.load('model.h5')
 if feedback:
     st.write('Văn bản phản hồi:', feedback)
     feedback = Preprocessing(feedback)
