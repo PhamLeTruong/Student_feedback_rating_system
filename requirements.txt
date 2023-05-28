@@ -3,3 +3,4 @@ joblib==1.1.1
 pyvi==0.1.1
 num2words==0.5.12
 phunspell==0.1.6
+xgboost==1.7.5
