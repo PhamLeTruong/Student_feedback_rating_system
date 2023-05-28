@@ -5,7 +5,6 @@ from pyvi import ViTokenizer
 from num2words import num2words
 import phunspell
 pspell = phunspell.Phunspell('vi_VN')
-import pickle
 
 def Preprocessing(feedback):
     # xóa ký tự kéo dài 
