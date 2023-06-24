@@ -2,9 +2,6 @@ import streamlit as st
 import joblib
 import re
 from pyvi import ViTokenizer
-from num2words import num2words
-import phunspell
-pspell = phunspell.Phunspell('vi_VN')
 
 def Preprocessing(feedback):
     # xóa ký tự kéo dài 
@@ -19,46 +16,47 @@ def Preprocessing(feedback):
         feedback = feedback.replace(icon,' ')
         
     # xóa từ viết tắt mà tác giả đã biến đổi
-    acronyms = ['colonsmile', 'colonsad', 'colonsurprise', 'colonlove', 'colonsmilesmile', 'coloncontemn', 'colonbigsmile', 'coloncc', 
-                'colonsmallsmile', 'coloncolon', 'colonlovelove', 'colonhihi', 'doubledot', 'colonsadcolon', 'colonsadcolon', 
-                'colondoublesurprise', 'vdotv','dotdotdot', 'fraction', 'csharp', 'dot']
+    acronyms = ['colon', 'smile', 'sad', 'surprise', 'love', 'contemn', 'big', 'smile', 'cc', 
+                'small', 'hihi', 'double', 'vdotv','dot', 'fraction', 'csharp']
     for acronym in acronyms:
         feedback = feedback.replace(acronym, ' ')
     
     # xóa ký tự đặc biệt
     punctuation = '!"#$%&\'()*+,-./:;<=>?@[\\]^_`{|}~'
     for punc in punctuation:
-        feedback = feedback.replace(punc,' ')
+        feedback = feedback.replace(punc,' ') 
 
     # ViTokenize tách từ
     feedback = ViTokenizer.tokenize(feedback)
     
-    # chuyển đổi số thành chữ
-    temp = ''
-    for word in feedback.split():
-        if word.isnumeric():
-            number = num2words(int(word), lang='vi')
-            temp += number + ' '   
-    # sửa lỗi chính tả
-        elif '_' in word or pspell.lookup(word)==True:
-            temp += word + ' '
-    feedback = temp.lower()
-
     return feedback
 
+if 'offensive_words' not in st.session_state:
+    with open('vn_offensive_words.txt', encoding='utf8') as f:
+        words = f.readlines()
+    words = [word[:-1] for word in words]
+    st.session_state.offensive_words = words
+    
 st.header('Mời Sinh Viên Nhập Phản Hồi Đánh Giá')
 feedback = st.text_input('', '', max_chars=250, help='Vui lòng đánh giá bằng tiếng việt và đúng chính tả')
-model, cv = joblib.load('model.h5')
+model, tfidf = joblib.load('model.h5')
+_, center, _ = st.columns(3)
 if feedback:
     st.write('Văn bản phản hồi:', feedback)
-    feedback = Preprocessing(feedback)
-    feedback = cv.transform([feedback])
-    pred = model.predict(feedback)
-    _, center, _ = st.columns(3)
-    with center:
+    check_offensive = False
+    for cmt in feedback.split():
+        if cmt in st.session_state.offensive_words:
+            check_offensive = True
+            break
+    if check_offensive:
+        center.header('Tiêu Cực')
+    else:
+        feedback = Preprocessing(feedback)
+        feedback = tfidf.transform([feedback])
+        pred = model.predict(feedback)
         if pred==0:
-            st.header('Tiêu Cực')
+            center.header('Tiêu Cực')
         elif pred==1:
-            st.header('Trung Tính')
+            center.header('Trung Tính')
         elif pred==2:
-            st.header('Tích cực')
+            center.header('Tích cực')
