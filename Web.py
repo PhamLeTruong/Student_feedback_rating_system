@@ -40,9 +40,9 @@ if 'offensive_words' not in st.session_state:
 st.header('Mời Sinh Viên Nhập Phản Hồi Đánh Giá')
 feedback = st.text_input('', '', max_chars=250, help='Vui lòng đánh giá bằng tiếng việt và đúng chính tả')
 model, tfidf = joblib.load('model.h5')
-left, center, right = st.columns(3)
+_, center, _ = st.columns(3)
 if feedback:
-    left.write('Văn bản phản hồi:', feedback)
+    st.write('Văn bản phản hồi:', feedback)
     check_offensive = False
     for cmt in feedback.split():
         if cmt in st.session_state.offensive_words:
