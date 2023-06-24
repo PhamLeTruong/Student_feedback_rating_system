@@ -25,6 +25,8 @@ cac
 concak
 nungcak
 bucak
+cc
+concac
 caiconcac
 caiconcak
 cu
