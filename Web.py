@@ -41,7 +41,7 @@ st.markdown(
         f"""
         <style>
         [data-testid='stAppViewContainer'] {{
-            background-image: url("https://cdn.pixabay.com/photo/2017/07/01/19/48/background-2462431_1280.jpg");
+            background-image: url("https://github.com/PhamLeTruong/Student_feedback_rating_system/blob/main/background.png");
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
