@@ -37,21 +37,6 @@ if 'offensive_words' not in st.session_state:
     words = [word[:-1] for word in words]
     st.session_state.offensive_words = words
 
-st.markdown(
-        f"""
-        <style>
-        [data-testid='stAppViewContainer'] {{
-            background-image: url("https://cdn-ejfid.nitrocdn.com/HahWXuLfKZbQhJjlzjiUHtqlxVqcJYyP/assets/images/optimized/rev-7b31d4e/wp-content/uploads/2019/11/20mm-PM18EA-feedback-product.jpg");
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-        }}
-        [data-testid='stHeader'] {{
-            background-color: rgba(0,0,0,0);
-        }}
-        </style>
-        """,
-        unsafe_allow_html=True)
 st.markdown("<h1 style='text-align: center; color: black;'>Sinh Viên Nhập Phản Hồi Đánh Giá</h1>", unsafe_allow_html=True)
 feedback = st.text_input('', '', max_chars=250, help='Vui lòng đánh giá bằng tiếng việt và đúng chính tả')
 model, tfidf = joblib.load('model.h5')
