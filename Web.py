@@ -41,7 +41,7 @@ st.markdown(
         f"""
         <style>
         [data-testid='stAppViewContainer'] {{
-            background-image: url("https://github.com/PhamLeTruong/Student_feedback_rating_system/blob/main/background.png");
+            background-image: url("https://www.questionpro.com/blog/student-feedback/");
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
