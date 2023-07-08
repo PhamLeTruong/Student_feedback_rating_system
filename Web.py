@@ -41,7 +41,7 @@ st.markdown(
         f"""
         <style>
         [data-testid='stAppViewContainer'] {{
-            background-image: url("https://www.questionpro.com/blog/wp-content/uploads/2022/05/student-feedback.jpg");
+            background-image: url("https://cdn-ejfid.nitrocdn.com/HahWXuLfKZbQhJjlzjiUHtqlxVqcJYyP/assets/images/optimized/rev-7b31d4e/wp-content/uploads/2019/11/20mm-PM18EA-feedback-product.jpg");
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
