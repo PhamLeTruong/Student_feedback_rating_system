@@ -42,6 +42,7 @@ st.markdown(
         content: "";
         background-image: url("https://raw.githubusercontent.com/PhamLeTruong/Student_feedback_rating_system/main/emotion.png");
         background-size: contain;
+        background-position: center top;
         background-repeat: no-repeat;
         position: absolute;
         top: 50%;
