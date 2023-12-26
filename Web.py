@@ -46,11 +46,13 @@ st.markdown(
         position: absolute;
         top: 50%;
         left: 50%;
-        transform: translate(-50%, -50%); /* Đặt phần tử ở giữa trên cùng */
-        width: 25%; /* Điều chỉnh kích thước ảnh emotion.png (giảm 25%) */
-        height: auto;
+        width: 100%;
+        height: 100%;
         background-image: url("https://raw.githubusercontent.com/PhamLeTruong/Student_feedback_rating_system/main/emotion.png");
+        background-size: auto;
+        background-position: center top;
         background-repeat: no-repeat;
+        opacity: 0.5; /* Điều chỉnh độ mờ của hình ảnh emotion */
     }}
     [data-testid='stHeader'] {{
         background-color: rgba(0,0,0,0);
