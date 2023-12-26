@@ -35,16 +35,34 @@ st.markdown(
     f"""
     <style>
     [data-testid='stAppViewContainer'] {{
-        background-image: url("https://raw.githubusercontent.com/PhamLeTruong/Student_feedback_rating_system/main/background.png"),
-                          url("https://raw.githubusercontent.com/PhamLeTruong/Student_feedback_rating_system/main/emotion.png");
-        background-size: cover, auto;
-        background-position: center, center top;
-        background-repeat: no-repeat, no-repeat;
-        height: 100vh; /* Set the height to 100% of the viewport height */
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+        position: relative;
+        height: 100vh;
+    }}
+    [data-testid='stAppViewContainer']::before {{
+        content: "";
+        background-image: url("https://raw.githubusercontent.com/PhamLeTruong/Student_feedback_rating_system/main/emotion.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100px; /* Điều chỉnh kích thước của hình ảnh emotion */
+        height: 100px; /* Điều chỉnh kích thước của hình ảnh emotion */
+        z-index: 1; /* Để đảm bảo rằng emotion sẽ hiển thị trên background */
+    }}
+    [data-testid='stAppViewContainer']::after {{
+        content: "";
+        background-image: url("https://raw.githubusercontent.com/PhamLeTruong/Student_feedback_rating_system/main/background.png");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 0;
     }}
     [data-testid='stHeader'] {{
         background-color: rgba(0, 0, 0, 0);
