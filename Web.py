@@ -32,38 +32,38 @@ def Preprocessing(feedback):
     return feedback
 
 st.markdown(
-        f"""
-        <style>
-        [data-testid='stAppViewContainer1'] {{
-            background-image: url("https://raw.githubusercontent.com/PhamLeTruong/Student_feedback_rating_system/main/background.png");
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            z-index: 1;
-        }}
-        [data-testid='stHeader'] {{
-            background-color: rgba(0,0,0,0);
-        }}
-        </style>
-        """,
-        unsafe_allow_html=True)
+    f"""
+    <style>
+    [data-testid='stAppViewContainer'] {{
+        background-image: url("https://raw.githubusercontent.com/PhamLeTruong/Student_feedback_rating_system/main/background.png");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        z-index: 1;
+    }}
+    [data-testid='stHeader'] {{
+        background-color: rgba(0, 0, 0, 0);
+    }}
+    </style>
+    """,
+    unsafe_allow_html=True)
 
 st.markdown(
-        f"""
-        <style>
-        [data-testid='stAppViewContainer2'] {{
-            background-image: url("https://raw.githubusercontent.com/PhamLeTruong/Student_feedback_rating_system/main/emotion.png");
-            background-size: auto;
-            background-position: center top;
-            background-repeat: no-repeat;
-            z-index: 2;
-        }}
-        [data-testid='stHeader'] {{
-            background-color: rgba(0,0,0,0);
-        }}
-        </style>
-        """,
-        unsafe_allow_html=True)
+    f"""
+    <style>
+    [data-testid='stAppViewContainer'] {{
+        background-image: url("https://raw.githubusercontent.com/PhamLeTruong/Student_feedback_rating_system/main/emotion.png");
+        background-size: auto;
+        background-position: center top;
+        background-repeat: no-repeat;
+        z-index: 0; /* Set a lower z-index */
+    }}
+    [data-testid='stHeader'] {{
+        background-color: rgba(0, 0, 0, 0);
+    }}
+    </style>
+    """,
+    unsafe_allow_html=True)
 
 if 'offensive_words' not in st.session_state:
     with open('vn_offensive_words.txt', encoding='utf8') as f:
