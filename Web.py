@@ -35,7 +35,7 @@ st.markdown(
         f"""
         <style>
         [data-testid='stAppViewContainer'] {{
-            background-image: url("https://miro.medium.com/v2/resize:fit:750/format:webp/1*fDnVCDLv3a8tyxuZEWIS3w.png");
+            background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1ci9PwAK7wyq5ROHjRkAGjpevqTOyKJIkbAbIBI7IL-NBsslvd7wTlJDa9IDvuTbkaxM&usqp=CAU");
             background-size: cover;
             background-position: left top;
             background-repeat: no-repeat;
