@@ -38,7 +38,7 @@ st.markdown(
         position: relative;
         background-image: url("https://raw.githubusercontent.com/PhamLeTruong/Student_feedback_rating_system/main/background.png"),
                           url("https://raw.githubusercontent.com/PhamLeTruong/Student_feedback_rating_system/main/emotion.png");
-        background-size: cover, cover;
+        background-size: cover, auto;
         background-position: center, center top;
         background-repeat: no-repeat, no-repeat;
         height: 300px;  /* Adjust the height as needed */
@@ -56,7 +56,7 @@ st.markdown(
         right: 0;
         bottom: 0;
         background-image: url("https://raw.githubusercontent.com/PhamLeTruong/Student_feedback_rating_system/main/emotion.png");
-        background-size: cover;
+        background-size: auto;
         background-position: center top;
         background-repeat: no-repeat;
         z-index: 1;  /* Set a higher z-index to display on top of the background */
