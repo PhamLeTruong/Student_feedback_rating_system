@@ -36,25 +36,28 @@ st.markdown(
     <style>
     [data-testid='stAppViewContainer'] {{
         position: relative;
-    }}
-    [data-testid='stAppViewContainer']::after {{
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-image: url("https://raw.githubusercontent.com/PhamLeTruong/Student_feedback_rating_system/main/background.png"),
-                          url("https://raw.githubusercontent.com/PhamLeTruong/Student_feedback_rating_system/main/emotion.png");
+        background-image: url("https://raw.githubusercontent.com/PhamLeTruong/Student_feedback_rating_system/main/background.png");
         background-size: cover;
-        background-position: center, center top;
+        background-position: center;
         background-repeat: no-repeat;
-        opacity: 0.5; /* Điều chỉnh độ mờ của hình ảnh emotion */
+        z-index: 1;
     }}
     [data-testid='stHeader'] {{
         background-color: rgba(0,0,0,0);
     }}
+    .emotion-image {{
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-image: url("https://raw.githubusercontent.com/PhamLeTruong/Student_feedback_rating_system/main/emotion.png");
+        background-position: center top;
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 100%;
+        z-index: 2;
+    }}
     </style>
+    <div class="emotion-image"></div>
     """,
     unsafe_allow_html=True)
 
