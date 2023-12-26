@@ -37,17 +37,22 @@ st.markdown(
     [data-testid='stAppViewContainer'] {{
         position: relative;
         background-image: url("https://raw.githubusercontent.com/PhamLeTruong/Student_feedback_rating_system/main/background.png");
-        background-size: cover;
+        background-size: 100% 100%; /* Chỉnh kích thước background chiếm toàn bộ màn hình */
         background-position: center;
         background-repeat: no-repeat;
     }}
     [data-testid='stAppViewContainer']::before {{
         content: "";
         position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
         background-image: url("https://raw.githubusercontent.com/PhamLeTruong/Student_feedback_rating_system/main/emotion.png");
         background-size: auto;
         background-position: center top;
         background-repeat: no-repeat;
+        opacity: 0.5; /* Điều chỉnh độ mờ của hình ảnh emotion */
     }}
     [data-testid='stHeader'] {{
         background-color: rgba(0,0,0,0);
