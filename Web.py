@@ -32,18 +32,20 @@ def Preprocessing(feedback):
     return feedback
 
 st.markdown(
-    f"""
-    <style>
-        body {{
+        f"""
+        <style>
+        [data-testid='stAppViewContainer'] {{
             background-image: url("https://raw.githubusercontent.com/PhamLeTruong/Student_feedback_rating_system/main/background.png");
             background-size: cover;
-            background-position: center;
+            background-position: center top;
             background-repeat: no-repeat;
         }}
-    </style>
-    """,
-    unsafe_allow_html=True
-)
+        [data-testid='stHeader'] {{
+            background-color: rgba(0,0,0,0);
+        }}
+        </style>
+        """,
+        unsafe_allow_html=True)
 
 if 'offensive_words' not in st.session_state:
     with open('vn_offensive_words.txt', encoding='utf8') as f:
