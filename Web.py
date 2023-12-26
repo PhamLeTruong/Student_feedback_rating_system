@@ -36,19 +36,14 @@ st.markdown(
     <style>
     [data-testid='stAppViewContainer'] {{
         position: relative;
-        height: 100vh;
     }}
     [data-testid='stAppViewContainer']::before {{
         content: "";
         background-image: url("https://raw.githubusercontent.com/PhamLeTruong/Student_feedback_rating_system/main/emotion.png");
-        background-size: contain;
+        background-size: auto;
+        background-position: center top;
         background-repeat: no-repeat;
         position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        width: 100px; /* Điều chỉnh kích thước của hình ảnh emotion */
-        height: 100px; /* Điều chỉnh kích thước của hình ảnh emotion */
         z-index: 1; /* Để đảm bảo rằng emotion sẽ hiển thị trên background */
     }}
     [data-testid='stAppViewContainer']::after {{
@@ -58,10 +53,6 @@ st.markdown(
         background-position: center;
         background-repeat: no-repeat;
         position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
         z-index: 0;
     }}
     [data-testid='stHeader'] {{
