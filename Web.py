@@ -59,7 +59,7 @@ if feedback:
             st.markdown('<h1 style="color: red; text-align: center;">Tiêu Cực</h1>', unsafe_allow_html=True)
         elif pred==1:
             #center.header('Trung Tính')
-            st.markdown('<h1 style="color: black; text-align: center;">Trung Tính</h1>', unsafe_allow_html=True)
+            st.markdown('<h1 style="color: yellow; text-align: center;">Trung Tính</h1>', unsafe_allow_html=True)
         elif pred==2:
             #center.header('Tích cực')
             st.markdown('<h1 style="color: green; text-align: center;">Tích Cực</h1>', unsafe_allow_html=True)
