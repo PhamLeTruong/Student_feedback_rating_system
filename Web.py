@@ -37,7 +37,7 @@ st.markdown(
     [data-testid='stAppViewContainer'] {{
         position: relative;
         background-image: url("https://raw.githubusercontent.com/PhamLeTruong/Student_feedback_rating_system/main/background.png");
-        background-size: 100% 100%; /* Chỉnh kích thước background chiếm toàn bộ màn hình */
+        background-size: cover; /* Chỉnh kích thước background chiếm toàn bộ màn hình */
         background-position: center;
         background-repeat: no-repeat;
     }}
@@ -52,7 +52,6 @@ st.markdown(
         background-size: auto;
         background-position: center top;
         background-repeat: no-repeat;
-        opacity: 0.5; /* Điều chỉnh độ mờ của hình ảnh emotion */
     }}
     [data-testid='stHeader'] {{
         background-color: rgba(0,0,0,0);
