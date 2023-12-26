@@ -35,14 +35,16 @@ st.markdown(
     f"""
     <style>
     [data-testid='stAppViewContainer'] {{
-        background-image: url("https://raw.githubusercontent.com/PhamLeTruong/Student_feedback_rating_system/main/background.png"),
-                          url("https://raw.githubusercontent.com/PhamLeTruong/Student_feedback_rating_system/main/emotion.png");
+        background: url("https://raw.githubusercontent.com/PhamLeTruong/Student_feedback_rating_system/main/background.png") left,
+                   url("https://raw.githubusercontent.com/PhamLeTruong/Student_feedback_rating_system/main/emotion.png") right;
         background-size: cover, contain;
         background-position: center, center top;
         background-repeat: no-repeat, no-repeat;
+        display: flex;
+        justify-content: space-between;
     }}
     [data-testid='stHeader'] {{
-        background-color: rgba(0,0,0,0);
+        background-color: rgba(0, 0, 0, 0);
     }}
     </style>
     """,
