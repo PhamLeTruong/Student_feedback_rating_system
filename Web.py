@@ -37,8 +37,24 @@ st.markdown(
         [data-testid='stAppViewContainer'] {{
             background-image: url("https://raw.githubusercontent.com/PhamLeTruong/Student_feedback_rating_system/main/background.png");
             background-size: cover;
+            background-position: center;
+            #background-repeat: no-repeat;
+        }}
+        [data-testid='stHeader'] {{
+            background-color: rgba(0,0,0,0);
+        }}
+        </style>
+        """,
+        unsafe_allow_html=True)
+
+st.markdown(
+        f"""
+        <style>
+        [data-testid='stAppViewContainer'] {{
+            background-image: url("https://raw.githubusercontent.com/PhamLeTruong/Student_feedback_rating_system/main/emotion.png");
+            #background-size: cover;
             background-position: center top;
-            background-repeat: no-repeat;
+            #background-repeat: no-repeat;
         }}
         [data-testid='stHeader'] {{
             background-color: rgba(0,0,0,0);
