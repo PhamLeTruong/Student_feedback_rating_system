@@ -37,7 +37,7 @@ if 'offensive_words' not in st.session_state:
     words = [word[:-1] for word in words]
     st.session_state.offensive_words = words
 
-st.markdown("<h1 style='text-align: center; color: black;'>Sinh Viên Nhập Phản Hồi Đánh Giá</h1>", unsafe_allow_html=True)
+st.markdown("<h1 style='text-align: center; color: red;'>Sinh Viên Nhập Phản Hồi Đánh Giá</h1>", unsafe_allow_html=True)
 feedback = st.text_input('', '', max_chars=250, help='Vui lòng đánh giá bằng tiếng việt và đúng chính tả')
 model, tfidf = joblib.load('model.h5')
 _, center, _ = st.columns(3)
@@ -55,8 +55,11 @@ if feedback:
         feedback = tfidf.transform([feedback])
         pred = model.predict(feedback)
         if pred==0:
-            center.header('Tiêu Cực')
+            #center.header('Tiêu Cực')
+            st.markdown('<h1 style="color: red; text-align: center;">Tiêu Cực</h1>', unsafe_allow_html=True)
         elif pred==1:
-            center.header('Trung Tính')
+            #center.header('Trung Tính')
+            st.markdown('<h1 style="color: black; text-align: center;">Trung Tính</h1>', unsafe_allow_html=True)
         elif pred==2:
-            center.header('Tích cực')
+            #center.header('Tích cực')
+            st.markdown('<h1 style="color: green; text-align: center;">Tích Cực</h1>', unsafe_allow_html=True)
