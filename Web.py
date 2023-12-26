@@ -38,18 +38,11 @@ st.markdown(
         position: relative;
     }}
     [data-testid='stAppViewContainer']::after {{
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
         background-image: url("https://raw.githubusercontent.com/PhamLeTruong/Student_feedback_rating_system/main/background.png"),
                           url("https://raw.githubusercontent.com/PhamLeTruong/Student_feedback_rating_system/main/emotion.png");
-        background-size: cover;
+        background-size: cover, auto;
         background-position: center, center top;
         background-repeat: no-repeat;
-        opacity: 0.5; /* Điều chỉnh độ mờ của hình ảnh emotion */
     }}
     [data-testid='stHeader'] {{
         background-color: rgba(0,0,0,0);
