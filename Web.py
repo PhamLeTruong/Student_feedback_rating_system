@@ -32,20 +32,16 @@ def Preprocessing(feedback):
     return feedback
 
 st.markdown(
-        f"""
-        <style>
-        [data-testid='stAppViewContainer'] {{
-            background-image: url("https://i1.wp.com/turbolab.in/wp-content/uploads/2021/09/sentiment.png");
+    f"""
+    <style>
+        body {{
+            background-image: url('https://github.com/PhamLeTruong/Student_feedback_rating_system/blob/main/background.jpg');
             background-size: cover;
-            background-position: left top;
-            background-repeat: no-repeat;
         }}
-        [data-testid='stHeader'] {{
-            background-color: rgba(0,0,0,0);
-        }}
-        </style>
-        """,
-        unsafe_allow_html=True)
+    </style>
+    """,
+    unsafe_allow_html=True
+)
 
 if 'offensive_words' not in st.session_state:
     with open('vn_offensive_words.txt', encoding='utf8') as f:
