@@ -35,7 +35,7 @@ st.markdown(
         f"""
         <style>
         [data-testid='stAppViewContainer'] {{
-            background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1ci9PwAK7wyq5ROHjRkAGjpevqTOyKJIkbAbIBI7IL-NBsslvd7wTlJDa9IDvuTbkaxM&usqp=CAU");
+            background-image: url("https://i1.wp.com/turbolab.in/wp-content/uploads/2021/09/sentiment.png");
             background-size: cover;
             background-position: left top;
             background-repeat: no-repeat;
