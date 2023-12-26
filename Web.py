@@ -58,9 +58,6 @@ st.markdown(
         background-repeat: no-repeat;
         z-index: 2;
     }}
-    [data-testid='stHeader'] {{
-        background-color: rgba(0, 0, 0, 0);
-    }}
     </style>
     """,
     unsafe_allow_html=True)
