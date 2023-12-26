@@ -37,7 +37,7 @@ st.markdown(
         [data-testid='stAppViewContainer'] {{
             background-image: url("https://raw.githubusercontent.com/PhamLeTruong/Student_feedback_rating_system/main/background.jpg");
             background-size: cover;
-            background-position: left top;
+            background-position: center;
             background-repeat: no-repeat;
         }}
         [data-testid='stHeader'] {{
