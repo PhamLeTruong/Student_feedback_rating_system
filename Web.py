@@ -49,11 +49,13 @@ st.markdown(
         width: 100%;
         height: 100%;
         background-image: url("https://raw.githubusercontent.com/PhamLeTruong/Student_feedback_rating_system/main/emotion.png");
-        background-size: auto;
+        background-size: 50%
         background-position: center top;
         background-repeat: no-repeat;
     }}
-   
+   [data-testid='stHeader'] {{
+            background-color: rgba(0,0,0,0);
+        }}
     </style>
     """,
     unsafe_allow_html=True
