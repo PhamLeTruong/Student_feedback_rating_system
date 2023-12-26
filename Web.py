@@ -34,12 +34,12 @@ def Preprocessing(feedback):
 st.markdown(
     f"""
     <style>
-    [data-testid='stAppViewContainer-background'] {{
-        background-image: url("https://raw.githubusercontent.com/PhamLeTruong/Student_feedback_rating_system/main/background.png");
-        background-size: cover;
-        background-position: center;
+    [data-testid='stAppViewContainer'] {{
+        background-image: url("https://raw.githubusercontent.com/PhamLeTruong/Student_feedback_rating_system/main/emotion.png");
+        background-size: 25% auto;
+        background-position: center top;
         background-repeat: no-repeat;
-        z-index: 1;
+        z-index: 0; /* Set a lower z-index */
     }}
     [data-testid='stHeader'] {{
         background-color: rgba(0, 0, 0, 0);
@@ -51,12 +51,12 @@ st.markdown(
 st.markdown(
     f"""
     <style>
-    [data-testid='stAppViewContainer-emotion'] {{
-        background-image: url("https://raw.githubusercontent.com/PhamLeTruong/Student_feedback_rating_system/main/emotion.png");
-        background-size: 25% auto;
-        background-position: center top;
+    [data-testid='stAppViewContainer'] {{
+        background-image: url("https://raw.githubusercontent.com/PhamLeTruong/Student_feedback_rating_system/main/background.png");
+        background-size: cover;
+        background-position: center;
         background-repeat: no-repeat;
-        z-index: 0; /* Set a lower z-index */
+        z-index: 2;
     }}
     [data-testid='stHeader'] {{
         background-color: rgba(0, 0, 0, 0);
