@@ -46,13 +46,12 @@ st.markdown(
         position: absolute;
         top: 0;
         left: 0;
-        width: 100%;
-        height: 100%;
+        width: 50%;
+        height: 50%;
         background-image: url("https://raw.githubusercontent.com/PhamLeTruong/Student_feedback_rating_system/main/emotion.png");
         background-size: auto;
         background-position: center top;
         background-repeat: no-repeat;
-        opacity: 0.5; /* Điều chỉnh độ mờ của hình ảnh emotion */
     }}
     [data-testid='stHeader'] {{
         background-color: rgba(0,0,0,0);
