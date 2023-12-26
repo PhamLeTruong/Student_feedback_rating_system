@@ -35,7 +35,7 @@ st.markdown(
         f"""
         <style>
         [data-testid='stAppViewContainer'] {{
-            background-image: url("background.jpg");
+            background-image: url("https://editor.analyticsvidhya.com/uploads/50131cover.jpg");
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
