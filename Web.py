@@ -35,32 +35,17 @@ st.markdown(
     f"""
     <style>
     [data-testid='stAppViewContainer'] {{
-        position: relative;
-        background-image: url("https://raw.githubusercontent.com/PhamLeTruong/Student_feedback_rating_system/main/background.png");
-        background-size: cover; /* Chỉnh kích thước background chiếm toàn bộ màn hình */
-        background-position: center;
-        background-repeat: no-repeat;
-    }}
-    [data-testid='stAppViewContainer']::before {{
-        content: "";
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        width: 100%;
-        height: 100%;
-        background-image: url("https://raw.githubusercontent.com/PhamLeTruong/Student_feedback_rating_system/main/emotion.png");
-        background-size: auto;
-        background-position: center top;
-        background-repeat: no-repeat;
-        opacity: 0.5; /* Điều chỉnh độ mờ của hình ảnh emotion */
+        background-image: url("https://raw.githubusercontent.com/PhamLeTruong/Student_feedback_rating_system/main/background.png, https://raw.githubusercontent.com/PhamLeTruong/Student_feedback_rating_system/main/emotion.png");
+        background-size: cover, auto;
+        background-position: center, center top;
+        background-repeat: no-repeat, no-repeat;
     }}
     [data-testid='stHeader'] {{
         background-color: rgba(0,0,0,0);
     }}
     </style>
     """,
-    unsafe_allow_html=True
-)
+    unsafe_allow_html=True)
 
 if 'offensive_words' not in st.session_state:
     with open('vn_offensive_words.txt', encoding='utf8') as f:
