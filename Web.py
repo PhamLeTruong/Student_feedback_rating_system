@@ -34,7 +34,7 @@ def Preprocessing(feedback):
 st.markdown(
     f"""
     <style>
-    [data-testid='stAppViewContainer'] {{
+    [data-testid='stAppViewContainer-background'] {{
         background-image: url("https://raw.githubusercontent.com/PhamLeTruong/Student_feedback_rating_system/main/background.png");
         background-size: cover;
         background-position: center;
@@ -51,7 +51,7 @@ st.markdown(
 st.markdown(
     f"""
     <style>
-    [data-testid='stAppViewContainer'] {{
+    [data-testid='stAppViewContainer-emotion'] {{
         background-image: url("https://raw.githubusercontent.com/PhamLeTruong/Student_feedback_rating_system/main/emotion.png");
         background-size: 25% auto;
         background-position: center top;
