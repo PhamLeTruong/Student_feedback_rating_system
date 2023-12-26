@@ -44,10 +44,6 @@ st.markdown(
     [data-testid='stAppViewContainer']::before {{
         content: "";
         position: absolute;
-        top: 0;
-        left: 0;
-        width: 50%;
-        height: 50%;
         background-image: url("https://raw.githubusercontent.com/PhamLeTruong/Student_feedback_rating_system/main/emotion.png");
         background-size: auto;
         background-position: center top;
