@@ -53,7 +53,7 @@ st.markdown(
     <style>
     [data-testid='stAppViewContainer'] {{
         background-image: url("https://raw.githubusercontent.com/PhamLeTruong/Student_feedback_rating_system/main/emotion.png");
-        background-size: 50% 50%;
+        background-size: 50% auto;
         background-position: center top;
         background-repeat: no-repeat;
         z-index: 0; /* Set a lower z-index */
