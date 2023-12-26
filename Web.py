@@ -35,7 +35,7 @@ st.markdown(
     f"""
     <style>
         body {{
-            background-image: url('https://github.com/PhamLeTruong/Student_feedback_rating_system/blob/main/background.jpg');
+            background-image: url('https://raw.githubusercontent.com/PhamLeTruong/Student_feedback_rating_system/main/background.jpg');
             background-size: cover;
         }}
     </style>
