@@ -35,7 +35,7 @@ st.markdown(
         f"""
         <style>
         [data-testid='stAppViewContainer'] {{
-            background-image: url("https://github.com/PhamLeTruong/Student_feedback_rating_system/blob/main/background.jpg");
+            background-image: url("https://miro.medium.com/v2/resize:fit:750/format:webp/1*fDnVCDLv3a8tyxuZEWIS3w.png");
             background-size: cover;
             background-position: left top;
             background-repeat: no-repeat;
