@@ -44,18 +44,17 @@ st.markdown(
     [data-testid='stAppViewContainer']::before {{
         content: "";
         position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%); /* Đặt phần tử ở giữa trên cùng */
+        width: 25%; /* Điều chỉnh kích thước ảnh emotion.png (giảm 25%) */
+        height: auto;
         background-image: url("https://raw.githubusercontent.com/PhamLeTruong/Student_feedback_rating_system/main/emotion.png");
-        background-size: 50%
-        background-position: center top;
         background-repeat: no-repeat;
     }}
-   [data-testid='stHeader'] {{
-            background-color: rgba(0,0,0,0);
-        }}
+    [data-testid='stHeader'] {{
+        background-color: rgba(0,0,0,0);
+    }}
     </style>
     """,
     unsafe_allow_html=True
