@@ -35,19 +35,10 @@ st.markdown(
     f"""
     <style>
     [data-testid='stAppViewContainer'] {{
-        background-image: url("https://raw.githubusercontent.com/PhamLeTruong/Student_feedback_rating_system/main/emotion.png");
-        background-size: 25% auto;
-        background-position: center top;
-        background-repeat: no-repeat;
-        z-index: 0; /* Set a lower z-index */
-    }}
-
-    [data-testid='stAppViewContainer'] {{
         background-image: url("https://raw.githubusercontent.com/PhamLeTruong/Student_feedback_rating_system/main/background.png");
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
-        z-index: 2;
     }}
 
     [data-testid='stHeader'] {{
