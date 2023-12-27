@@ -54,7 +54,7 @@ if 'offensive_words' not in st.session_state:
     st.session_state.offensive_words = words
 
 st.markdown("<br><br><br><h1 style='text-align: center; color: black;'>Sinh Viên Nhập Phản Hồi Đánh Giá</h1>", unsafe_allow_html=True)
-feedback = st.text_input('', '', max_chars=250, placeholder='Nhập phản hồi đánh giá tại đây :balloon:' , help='Vui lòng đánh giá bằng tiếng việt và đúng chính tả')
+feedback = st.text_input('', '', max_chars=250, placeholder='Nhập phản hồi đánh giá tại đây' , help='Vui lòng đánh giá bằng tiếng việt và đúng chính tả')
 model, tfidf = joblib.load('model.h5')
 _, center, _ = st.columns(3)
 if feedback:
